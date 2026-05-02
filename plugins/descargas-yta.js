@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 import yts from 'yt-search'
 import { createRequire } from 'module'
 const require = createRequire(import.meta.url)
-const { ytmp3 } = require('@hiudyy/ytdl') //
+import ytdl from 'ytdl-core'
 
 const LimitAud = 700 * 1024 * 1024 // 700MB
 
@@ -51,25 +51,26 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
     const target = youtubeLink || yt_play?.[0]?.url
     if (!target) throw new Error('No se encontró URL válida de YouTube ni resultados de búsqueda.')
 
-    const result = await ytmp3(target)
+    const info = await ytdl.getInfo(target)
+    const format = ytdl.chooseFormat(info.formats, { filter: 'audioonly' })
+    if (!format?.url) throw new Error('No se encontró formato de audio')
+    const audioUrl = format.url
+    const mimetype = format.mimeType?.split(';')[0] || 'audio/mpeg'
 
-    let audioData = result
-    let isDirect = true
-
-    let fileSize = 0
-    if (typeof audioData === 'string') {
-      fileSize = await getFileSize(audioData)
-      isDirect = false
-    }
+    // Descargar buffer directamente para evitar URLs expiradas
+    const audioRes = await fetch(audioUrl)
+    if (!audioRes.ok) throw new Error(`Error al descargar audio: ${audioRes.status}`)
+    const audioBuffer = await audioRes.buffer()
+    if (!audioBuffer || audioBuffer.length === 0) throw new Error('Buffer de audio vacío o inválido')
 
     const fileName = `${sanitizeFilename(yt_play?.[0]?.title || 'audio')}.mp3`
 
-    if (fileSize > LimitAud) {
+    if (audioBuffer.length > LimitAud) {
       await conn.sendMessage(
         m.chat,
         {
-          document: isDirect ? audioData : { url: audioData },
-          mimetype: 'audio/mpeg',
+          document: audioBuffer,
+          mimetype: mimetype,
           fileName
         },
         { quoted: m }
@@ -78,8 +79,8 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
       await conn.sendMessage(
         m.chat,
         {
-          audio: isDirect ? audioData : { url: audioData },
-          mimetype: 'audio/mpeg',
+          audio: audioBuffer,
+          mimetype: mimetype,
           fileName
         },
         { quoted: m }
@@ -96,13 +97,17 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
       const title = yt_play?.[0]?.title || sanka.title || 'audio'
       const fileName = `${sanitizeFilename(title)}.mp3`
 
-      const fileSize = await getFileSize(audioUrl)
+      // Descargar buffer directamente
+      const audioRes = await fetch(audioUrl)
+      if (!audioRes.ok) throw new Error(`Error al descargar audio de Sanka: ${audioRes.status}`)
+      const audioBuffer = await audioRes.buffer()
+      if (!audioBuffer || audioBuffer.length === 0) throw new Error('Buffer de audio de Sanka vacío')
 
-      if (fileSize > LimitAud) {
+      if (audioBuffer.length > LimitAud) {
         await conn.sendMessage(
           m.chat,
           {
-            document: { url: audioUrl },
+            document: audioBuffer,
             mimetype: 'audio/mpeg',
             fileName
           },
@@ -112,7 +117,7 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
         await conn.sendMessage(
           m.chat,
           {
-            audio: { url: audioUrl },
+            audio: audioBuffer,
             mimetype: 'audio/mpeg',
             fileName
           },

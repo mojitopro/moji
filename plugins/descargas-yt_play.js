@@ -151,17 +151,32 @@ return {mediaData, isDirect}
 try {
 if (text === '🎶' || text === 'audio') {
 await conn.reply(m.chat, lenguajeGB['smsAvisoEG']() + mid.smsAud, fkontak, m || null)
-const {mediaData, isDirect} = await download(audioApis)
+const {mediaData} = await download(audioApis)
 if (mediaData) {
-const fileSize = await getFileSize(mediaData)
-if (fileSize > LimitAud) {
+try {
+// Descargar buffer directamente para evitar URLs expiradas
+let audioBuffer
+if (typeof mediaData === 'string') {
+  const res = await fetch(mediaData)
+  if (!res.ok) throw new Error(`Error al descargar audio: ${res.status}`)
+  audioBuffer = await res.buffer()
+} else {
+  audioBuffer = mediaData
+}
+if (!audioBuffer || audioBuffer.length === 0) throw new Error('Buffer de audio vacío')
+const fileName = `${userVideoData.title.replace(/[\\/:*?"<>|]/g, '').slice(0, 200)}.mp3`
+if (audioBuffer.length > LimitAud) {
 await conn.sendMessage(
 m.chat,
-{document: isDirect ? mediaData : {url: mediaData}, mimetype: 'audio/mpeg', fileName: `${userVideoData.title}.mp3`},
+{document: audioBuffer, mimetype: 'audio/mpeg', fileName},
 {quoted: m || null}
 )
 } else {
-await conn.sendMessage(m.chat, {audio: isDirect ? mediaData : {url: mediaData}, mimetype: 'audio/mpeg'}, {quoted: m || null})
+await conn.sendMessage(m.chat, {audio: audioBuffer, mimetype: 'audio/mpeg'}, {quoted: m || null})
+}
+} catch (e) {
+console.log('Error al procesar audio:', e)
+await conn.reply(m.chat, '❌ Error al procesar el audio', m || null)
 }
 } else {
 await conn.reply(m.chat, '❌ No se pudo descargar el audio', m || null)
