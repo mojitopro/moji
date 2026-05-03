@@ -47,7 +47,7 @@ await delay(1 * 10000)
 }
 }
 } finally {
-chat.welcome = true
+//chat.welcome = true
 }
 break
 }

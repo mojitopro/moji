@@ -23,7 +23,7 @@ global.mods = []
 global.prems = []
 
 //cambia a false Desactivar en "auto-reconexion" de sub-bots
-global.gataJadibts = true
+global.gataJadibts = false
 
 // Cambiar a false para usar el Bot desde el mismo numero del Bot.
 global.isBaileysFail = false

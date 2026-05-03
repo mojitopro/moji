@@ -975,7 +975,7 @@ if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
 
 if (chat) {
 if (!('isBanned' in chat)) chat.isBanned = false
-if (!('welcome' in chat)) chat.welcome = true
+if (!('welcome' in chat)) chat.welcome = false
 if (!('detect' in chat)) chat.detect = false
 if (!('sWelcome' in chat)) chat.sWelcome = ''
 if (!('sBye' in chat)) chat.sBye = ''
@@ -984,12 +984,12 @@ if (!('sDemote' in chat)) chat.sDemote = ''
 if (!('sCondition' in chat)) chat.sCondition = ''
 if (!('sAutorespond' in chat)) chat.sAutorespond = ''
 if (!('delete' in chat)) chat.delete = false
-if (!('modohorny' in chat)) chat.modohorny = true
+if (!('modohorny' in chat)) chat.modohorny = false
 if (!('stickers' in chat)) chat.stickers = false
 if (!('autosticker' in chat)) chat.autosticker = false
-if (!('audios' in chat)) chat.audios = true
+if (!('audios' in chat)) chat.audios = false
 if (!('antiver' in chat)) chat.antiver = false
-if (!('antiPorn' in chat)) chat.antiPorn = true
+if (!('antiPorn' in chat)) chat.antiPorn = false
 if (!('antiLink' in chat)) chat.antiLink = false
 if (!('antiLink2' in chat)) chat.antiLink2 = false
 if (!('antiTiktok' in chat)) chat.antiTiktok = false
@@ -1002,17 +1002,17 @@ if (!('antiDiscord' in chat)) chat.antiDiscord = false
 if (!('antiThreads' in chat)) chat.antiThreads = false
 if (!('antiTwitch' in chat)) chat.antiTwitch = false
 if (!('antifake' in chat)) chat.antifake = false
-if (!('reaction' in chat)) chat.reaction = true
+if (!('reaction' in chat)) chat.reaction = false
 if (!('viewonce' in chat)) chat.viewonce = false
 if (!('modoadmin' in chat)) chat.modoadmin = false
-if (!('autorespond' in chat)) chat.autorespond = true
-if (!('antitoxic' in chat)) chat.antitoxic = true
-if (!('game' in chat)) chat.game = true
-if (!('game2' in chat)) chat.game2 = true
+if (!('autorespond' in chat)) chat.autorespond = false
+if (!('antitoxic' in chat)) chat.antitoxic = false
+if (!('game' in chat)) chat.game = false
+if (!('game2' in chat)) chat.game2 = false
 if (!('simi' in chat)) chat.simi = false
-if (!('antiTraba' in chat)) chat.antiTraba = true
+if (!('antiTraba' in chat)) chat.antiTraba = false
 if (!('primaryBot' in chat)) chat.primaryBot = null
-if (!('autolevelup' in chat)) chat.autolevelup = true
+if (!('autolevelup' in chat)) chat.autolevelup = false
 if (!isNumber(chat.expired)) chat.expired = 0
 if (!('horarioNsfw' in chat)) {
 chat.horarioNsfw = {
@@ -1023,8 +1023,8 @@ fin: '23:59'
 } else
 global.db.data.chats[m.chat] = {
 isBanned: false,
-welcome: true,
-detect: true,
+welcome: false,
+detect: false,
 sWelcome: '',
 sBye: '',
 sPromote: '',
@@ -1032,12 +1032,12 @@ sDemote: '',
 sCondition: '',
 sAutorespond: '',
 delete: false,
-modohorny: true,
+modohorny: false,
 stickers: false,
 autosticker: false,
 audios: false,
-antiver: true,
-antiPorn: true,
+antiver: false,
+antiPorn: false,
 antiLink: false,
 antiLink2: false,
 antiTiktok: false,
@@ -1050,17 +1050,17 @@ antiDiscord: false,
 antiThreads: false,
 antiTwitch: false,
 antifake: false,
-reaction: true,
+reaction: false,
 viewonce: false,
 modoadmin: false,
-autorespond: true,
-antitoxic: true,
-game: true,
-game2: true,
+autorespond: false,
+antitoxic: false,
+game: false,
+game2: false,
 simi: false,
-antiTraba: true,
+antiTraba: false,
 primaryBot: null,
-autolevelup: true,
+autolevelup: false,
 expired: 0,
 horarioNsfw: {
 inicio: '00:00',
@@ -1077,10 +1077,10 @@ if (!('restrict' in settings)) settings.restrict = false
 if (!('temporal' in settings)) settings.temporal = false
 if (!('anticommand' in settings)) settings.anticommand = false
 if (!('antiPrivate' in settings)) settings.antiPrivate = false
-if (!('antiCall' in settings)) settings.antiCall = true
-if (!('antiSpam' in settings)) settings.antiSpam = true
+if (!('antiCall' in settings)) settings.antiCall = false
+if (!('antiSpam' in settings)) settings.antiSpam = false
 if (!('modoia' in settings)) settings.modoia = false
-if (!('jadibotmd' in settings)) settings.jadibotmd = true
+if (!('jadibotmd' in settings)) settings.jadibotmd = false
 if (!('prefix' in settings)) settings.prefix = opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@'
 } else
 global.db.data.settings[this.user.jid] = {
@@ -1090,12 +1090,12 @@ autoread2: false,
 restrict: false,
 temporal: false,
 antiPrivate: false,
-antiCall: true,
-antiSpam: true,
+antiCall: false,
+antiSpam: false,
 modoia: false,
 anticommand: false,
 prefix: opts['prefix'] || '*/i!#$%+£¢€¥^°=¶∆×÷π√✓©®&.\\-.@',
-jadibotmd: true
+jadibotmd: false
 }
 } catch (e) {
 console.error(e)
