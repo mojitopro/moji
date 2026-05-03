@@ -1,4 +1,4 @@
-// Código elaborado por GataNina-Li (Gata Dios)
+// Código elaborado por MoJiTo (Gata Dios)
 
 /*let { downloadContentFromMessage } = (await import(global.baileys))
 import uploadImage from '../lib/uploadImage.js'
@@ -61,7 +61,7 @@ link = false
 }
 
 if (!link) return 
-const response = await fetch(`https://api.alyachan.dev/api/porn-detector?image=${link}&apikey=GataDios`)
+const response = await fetch(`https://api.alyachan.dev/api/porn-detector?image=${link}&apikey=Brian Martins`)
 const result = await response.json()
 enlace = null
 

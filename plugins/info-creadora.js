@@ -1,4 +1,4 @@
-//CÓDIGO CREADO GRACIAS A https://github.com/AzamiJs & https://github.com/GataNina-Li
+//CÓDIGO CREADO GRACIAS A https://github.com/AzamiJs & https://github.com/MoJiTo
 //Puedes editar el país,enlaces, los números se editan desde el config.js
 import fetch from 'node-fetch'
 
@@ -50,7 +50,7 @@ const lugar = i === 0 ? '🇪🇨 Ecuador' : i === 1 ? '🇦🇷 Argentina' : i 
 
 const enlace =
 i === 0
-? 'https://github.com/GataNina-Li'
+? 'https://github.com/MoJiTo'
 : i === 1
 ? 'https://github.com/elrebelde21'
 : i === 2

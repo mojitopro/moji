@@ -162,5 +162,5 @@ AzamiJs:
 - format alinea imports, limpia sangrías y ordena imports alfabéticamente
 - Mantiene los comentarios de bloque intactos
 - Al final se imprime un resumen de los archivos modificados
-- Todo es a petición de GataDios
+- Todo es a petición de Brian Martins
 */

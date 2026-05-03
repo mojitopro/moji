@@ -1848,7 +1848,7 @@ thumbnail: apii.data,
 title: [wm, '😻 𝗦𝘂𝗽𝗲𝗿 ' + gt + ' 😻', '🌟 centergatabot.gmail.com'].getRandom(),
 containsAutoReply: true,
 mediaType: 1,
-sourceUrl: 'https://github.com/GataNina-Li/GataBot-MD'
+sourceUrl: 'https://github.com/MoJiTo/GataBot-MD'
 }
 }
 },

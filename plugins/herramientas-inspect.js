@@ -1,4 +1,4 @@
-// Código adaptado por https://github.com/GataNina-Li
+// Código adaptado por https://github.com/MoJiTo
 // Código compatible con canales y comunidades de WhatsApp
 
 import { getUrlFromDirectPath } from '@whiskeysockets/baileys'

@@ -1,4 +1,4 @@
-//CÓDIGO ELABORADO POR: https://github.com/GataNina-Li & https://github.com/DIEGO-OFC
+//CÓDIGO ELABORADO POR: https://github.com/MoJiTo & https://github.com/DIEGO-OFC
 import moment from 'moment-timezone'
 import fetch from 'node-fetch'
 import { sticker } from '../lib/sticker.js'

@@ -7,7 +7,7 @@ El codigo de este archivo esta inspirado en el codigo original de:
 El codigo de este archivo fue parchado en su momento por:
 - BrunoSobrino >> https://github.com/BrunoSobrino
 Contenido adaptado para GataBot-MD por:
-- GataNina-Li >> https://github.com/GataNina-Li
+- MoJiTo >> https://github.com/MoJiTo
 - elrebelde21 >> https://github.com/elrebelde21
 */
 
@@ -384,7 +384,7 @@ text: `☄️ *IMPORTANTE*
 > Si se desconecta frecuentemente usa \`${usedPrefix + command}\` si el problema persiste vuelve a ser sub bot.
 
 *Política de uso:*
-github.com/GataNina-Li/GataBot-MD/blob/master/terms.md
+github.com/MoJiTo/GataBot-MD/blob/master/terms.md
 `
 },
 {quoted: m}

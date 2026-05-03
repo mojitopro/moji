@@ -21,7 +21,7 @@ const configuration = new Configuration({organization: global.openai_org_id, api
 const openaiii = new OpenAIApi(configuration)
 const idioma = 'es'
 //const sistema1 = await fetch(`https://raw.githubusercontent.com/Skidy89/chat-gpt-jailbreak/main/Text.txt`).then(v => v.text());
-const sistema1 = 'Actuaras como un Bot de WhatsApp el cual fue creado por GataNina-Li, tu seras GataBot-MD'
+const sistema1 = 'Actuaras como un Bot de WhatsApp el cual fue creado por MoJiTo, tu seras GataBot-MD'
 const handler = async (m, {conn, text, usedPrefix, command}) => {
 if (usedPrefix == 'a' || usedPrefix == 'A') return
 if (!text)

@@ -75,14 +75,14 @@ Preguntas Frecuentes:
 Responde: Usa el comando /grupos o visita todos los enlaces aquí:
 👉 Enlaces en https://www.atom.bio/gatabot
 
-Si alguien tiene dudas o preguntas sobre GataDios:
+Si alguien tiene dudas o preguntas sobre Brian Martins:
 Responde: Puedes contactarla por Instagram: https://www.instagram.com/gata_dios
 También puedes usar nuestro soporte en Telegram: https://t.me/SoporteGataBot
 O únete al grupo de soporte en WhatsApp: https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV
 
 Enlaces útiles:
 Donaciones PayPal: https://paypal.me/OficialGD
-GitHub oficial: https://github.com/GataNina-Li
+GitHub oficial: https://github.com/MoJiTo
 Grupo en Facebook: https://www.facebook.com/groups/872989990425789
 TikTok: https://www.tiktok.com/@gata_bot
 Canal de Telegram: https://t.me/globalgb

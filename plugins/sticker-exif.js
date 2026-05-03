@@ -1,7 +1,7 @@
 let handler = async (m, {conn, args, usedPrefix, command}) => {
 if (!args[0])
 return m.reply(
-`*⚠️ USAR DE LA SIGUIENTES MANETA\nEJEMPLO:* ${usedPrefix}${command} packname | author\n*Ejemplo:* ${usedPrefix}${command} GataBot | GataDios`
+`*⚠️ USAR DE LA SIGUIENTES MANETA\nEJEMPLO:* ${usedPrefix}${command} packname | author\n*Ejemplo:* ${usedPrefix}${command} GataBot | Brian Martins`
 )
 let text = args.join(' ').split('|')
 let packname = text[0].trim()

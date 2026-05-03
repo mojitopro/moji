@@ -80,11 +80,11 @@ const audioApis = [
 {url: () => ytmp3(userVideoData.url), extract: (data) => ({data, isDirect: true})},
 {
 url: () =>
-fetch(`https://api.neoxr.eu/api/youtube?url=${userVideoData.url}&type=audio&quality=128kbps&apikey=GataDios`).then((res) => res.json()),
+fetch(`https://api.neoxr.eu/api/youtube?url=${userVideoData.url}&type=audio&quality=128kbps&apikey=Brian Martins`).then((res) => res.json()),
 extract: (data) => ({data: data.data.url, isDirect: false})
 },
 {
-url: () => fetch(`${global.APIs.stellar.url}/dow/ytmp3?url=${userVideoData.url}&key=GataDios`).then((res) => res.json()),
+url: () => fetch(`${global.APIs.stellar.url}/dow/ytmp3?url=${userVideoData.url}&key=Brian Martins`).then((res) => res.json()),
 extract: (data) => ({data: data?.data?.dl, isDirect: false})
 },
 {
@@ -109,11 +109,11 @@ url: () => fetch(`https://api.siputzx.my.id/api/d/ytmp4?url=${userVideoData.url}
 extract: (data) => ({data: data.dl, isDirect: false})
 },
 {
-url: () => fetch(`https://api.neoxr.eu/api/youtube?url=${userVideoData.url}&type=video&quality=720p&apikey=GataDios`).then((res) => res.json()),
+url: () => fetch(`https://api.neoxr.eu/api/youtube?url=${userVideoData.url}&type=video&quality=720p&apikey=Brian Martins`).then((res) => res.json()),
 extract: (data) => ({data: data.data.url, isDirect: false})
 },
 {
-url: () => fetch(`${global.APIs.stellar.url}/dow/ytmp4?url=${userVideoData.url}&key=GataDios`).then((res) => res.json()),
+url: () => fetch(`${global.APIs.stellar.url}/dow/ytmp4?url=${userVideoData.url}&key=Brian Martins`).then((res) => res.json()),
 extract: (data) => ({data: data?.data?.dl, isDirect: false})
 },
 {

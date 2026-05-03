@@ -1,4 +1,4 @@
-// Botones interactivos adptados y funcionando por Gata Dios (GataNina-Li)
+// Botones interactivos adptados y funcionando por Gata Dios (MoJiTo)
 
 //QUEDO OBSOLETO DE NUEVO CULPA DE WHATSAPP BUG :v
 import { getDevice } from '@whiskeysockets/baileys'

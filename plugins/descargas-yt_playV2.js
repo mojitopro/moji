@@ -168,7 +168,7 @@ const aa = await conn.sendMessage(m.chat, {audio: {url: audiocore}, fileName: `e
 if (!aa) {
 throw new Error();
 }} catch {
-try{const res = await fetch(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${text}`);
+try{const res = await fetch(`https://skizo.tech/api/y2mate?apikey=Brian Martins&url=${text}`);
 const json = await res.json();
 const aa_1 = await conn.sendMessage(m.chat, {audio: {url: json.result.audio}, fileName: `error.mp3`, mimetype: 'audio/mp4'}, {quoted: m});
 if (!aa_1) aa_1 = await conn.sendFile(m.chat, json.result.audio, 'error.mp3', null, m, false, {mimetype: 'audio/mp4'});
@@ -200,7 +200,7 @@ let yt0 = await fg.ytv(res0.url,'360p')
 await conn.sendFile(m.chat, yt0.dl_url, 'error.mp4', `${wm}`, m);
 }
 catch{
-const res = await fetch(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${text}`);
+const res = await fetch(`https://skizo.tech/api/y2mate?apikey=Brian Martins&url=${text}`);
 const json = await res.json();
 await conn.sendFile(m.chat, json.result.video, 'error.mp4', `${wm}`, m);  
 }
@@ -237,7 +237,7 @@ const bytes = await bytesToSize(contentLength);
 result[i] = {audio: item.url, size: bytes};
 }}
 const resultFix = result.filter((x) => x.audio != undefined && x.size != undefined);
-const tiny = await axios.get(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${resultFix[0].audio}`);
+const tiny = await axios.get(`https://skizo.tech/api/y2mate?apikey=Brian Martins&url=${resultFix[0].audio}`);
 const tinyUrl = tiny.data;
 const title = getUrl.videoDetails.title;
 const thumb = getUrl.player_response.microformat.playerMicroformatRenderer.thumbnail.thumbnails[0].url;
@@ -257,7 +257,7 @@ const bytes = await bytesToSize(contentLength);
 result[i] = {video: item.url, quality: qualityLabel, size: bytes};
 }}
 const resultFix = result.filter((x) => x.video != undefined && x.size != undefined && x.quality != undefined);
-const tiny = await axios.get(`https://skizo.tech/api/y2mate?apikey=GataDios&url=${resultFix[0].video}`);
+const tiny = await axios.get(`https://skizo.tech/api/y2mate?apikey=Brian Martins&url=${resultFix[0].video}`);
 const tinyUrl = tiny.data;
 const title = getUrl.videoDetails.title;
 const thumb = getUrl.player_response.microformat.playerMicroformatRenderer.thumbnail.thumbnails[0].url;
@@ -304,7 +304,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨',
 body: 'Super Bot WhatsApp',         
 previewType: 0, thumbnail: fs.readFileSync("./media/menus/Menu3.jpg"),
-sourceUrl: `https://github.com/GataNina-Li/GataBot-MD`}}}) 
+sourceUrl: `https://github.com/MoJiTo/GataBot-MD`}}}) 
   
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text)
 //https://leyscoders-api.herokuapp.com/api/playmp3?q=lebih%20baik%20darinya&apikey=Your_Key
@@ -317,7 +317,7 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: '𝙂𝙖𝙩𝙖𝘽𝙤𝙩-𝙈𝘿 | 𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨',
 body: 'Super Bot WhatsApp',         
 previewType: 0, thumbnail: fs.readFileSync("./media/menus/Menu3.jpg"),
-sourceUrl: `https://github.com/GataNina-Li/GataBot-MD`}}})
+sourceUrl: `https://github.com/MoJiTo/GataBot-MD`}}})
   
 let res = await fetch("https://violetics.pw/api/media/youtube-play?apikey=beta&query="+text) 
 let json = await res.json()
