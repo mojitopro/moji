@@ -35,7 +35,7 @@ server.listen(PORT, () => {
 // Iniciar el bot de WhatsApp como proceso hijo usando fork()
 console.log('Iniciando bot de WhatsApp...')
 const botProcess = fork('index.js', [], {
-  stdio: ['inherit', 'inherit', 'inherit'],
+  stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
   env: { ...process.env, NODE_ENV: 'production' }
 })
 
