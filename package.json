@@ -10,9 +10,10 @@
     "plugins": "plugins"
   },
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "start": "node server.js"
-},
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "postinstall": "find node_modules/@bochilteam/scraper-bmkg -name '*.js' -exec sed -i \"s/import cheerio from 'cheerio'/import * as cheerio from 'cheerio'/g\" {} \\; 2>/dev/null || true"
+  },
   "homepage": "https://github.com/GataNina-Li/GataBot-MD",
   "author": {
     "name": "GataNina-Li"
