@@ -1152,6 +1152,7 @@ handler.command = [
 'menu18',
 'menugrupo'
 ]
+//handler.register = true
 handler.exp = 50
 export default handler
 

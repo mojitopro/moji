@@ -22,6 +22,7 @@ handler.tags = ['downloader']
 handler.command = /gitclone|clonarepo|clonarrepo|repoclonar/i
 handler.limit = 2
 handler.level = 3
+handler.register = true
 export default handler
 
 /*let info = `💖 *Infórmate sobre las Novedades y recuerda tener la última versión.*\n\n💝 *Find out about what's new and remember to have the latest version.*

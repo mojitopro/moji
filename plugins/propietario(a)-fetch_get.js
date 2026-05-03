@@ -25,5 +25,6 @@ handler.help = ['fetch'].map((v) => v + ' *<url>*')
 handler.tags = ['owner']
 handler.command = /^(fetch|get)$/i
 handler.limit = 1
+handler.register = true
 
 export default handler

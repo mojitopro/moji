@@ -60,6 +60,7 @@ await m.react('❌')
 handler.help = ['mediafire'].map((v) => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i
+handler.register = true
 handler.limit = true
 
 export default handler

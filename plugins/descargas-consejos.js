@@ -77,6 +77,7 @@ console.log(e)
 }
 }
 handler.command = ['consejo', 'advice', 'frase2', 'phrase2']
+handler.register = true
 export default handler
 
 global.motivation = [

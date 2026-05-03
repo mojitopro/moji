@@ -67,4 +67,5 @@ return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i]
 handler.help = ['drive'].map((v) => v + ' <url>')
 handler.tags = ['downloader']
 handler.command = /^(drive|drivedl|dldrive|gdrive)$/i
+handler.register = true
 export default handler

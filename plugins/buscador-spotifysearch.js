@@ -32,6 +32,7 @@ handler.limit = false
 handler.command = /^(spotifysearch)$/i
 handler.limit = 1
 handler.level = 3
+handler.register = true
 export default handler
 
 function _0x5a66() {

@@ -213,4 +213,5 @@ await m.react('✅')
 handler.help = ['addcmd']
 handler.tags = ['tools']
 handler.command = /^(guardar|save|setcmd|addcmd)$/i
+handler.register = true
 export default handler

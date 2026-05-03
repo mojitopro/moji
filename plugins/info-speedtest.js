@@ -26,4 +26,5 @@ return m.reply(o)
 handler.help = ['speedtest']
 handler.tags = ['info']
 handler.command = /^(speedtest?|test?speed)$/i
+handler.register = true
 export default handler

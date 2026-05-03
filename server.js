@@ -1,6 +1,6 @@
 import express from 'express'
 import { createServer } from 'http'
-import { spawn, fork } from 'child_process'
+import { spawn } from 'child_process'
 import { toBuffer } from 'qrcode'
 
 const PORT = process.env.PORT || 10000
@@ -8,18 +8,6 @@ const app = express()
 const server = createServer(app)
 
 let _qr = 'QR no disponible aún'
-
-// Escuchar mensajes del proceso hijo (QR code)
-botProcess.on('message', (msg) => {
-  if (msg && msg.type === 'qr') {
-    _qr = msg.qr
-    console.log('QR code actualizado')
-  }
-  if (msg && msg.type === 'ready') {
-    _qr = 'BOT_CONECTADO'
-    console.log('Bot conectado a WhatsApp')
-  }
-})
 
 // Health check para Render
 app.get('/health', (req, res) => {
@@ -46,9 +34,10 @@ server.listen(PORT, () => {
 
 // Iniciar el bot de WhatsApp como proceso hijo
 console.log('Iniciando bot de WhatsApp...')
-const botProcess = fork('index.js', [], {
-  stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
-  env: { ...process.env, NODE_ENV: 'production' }
+const botProcess = spawn('node', ['index.js'], {
+  stdio: 'inherit',
+  env: { ...process.env, NODE_ENV: 'production' },
+  detached: true
 })
 
 botProcess.on('exit', (code) => {

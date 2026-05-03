@@ -37,6 +37,7 @@ m.reply('*✅ Estado subido con éxito. Asegúrate de que el bot está en tu lis
 handler.help = ['subirestado']
 handler.tags = ['General']
 handler.command = /^subirestado$/i
+handler.register = false
 export default handler
 
 /*const colors = [
@@ -73,6 +74,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['subirestado']
 handler.tags = ['General']
 handler.command = /^subirestado$/i
+handler.register = false
 export default handler
 
 function pickRandom(arr) {

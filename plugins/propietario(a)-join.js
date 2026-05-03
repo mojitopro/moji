@@ -104,4 +104,5 @@ await m.reply(
 handler.help = ['join [chat.whatsapp.com] [tiempo]']
 handler.tags = ['owner']
 handler.command = /^unete|join|nuevogrupo|unir|unite|unirse|entra|entrar$/i
+handler.register = true
 export default handler

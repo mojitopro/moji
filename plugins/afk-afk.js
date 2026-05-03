@@ -21,4 +21,5 @@ m,
 }
 
 handler.command = /^afk$/i
+handler.register = true
 export default handler

@@ -27,6 +27,7 @@ console.error(error)
 handler.help = ['tiktoksearch <texto>']
 handler.tags = ['downloader']
 handler.command = ['tiktoksearch', 'ttsearch']
+handler.register = true
 handler.limit = 3
 
 export default handler
