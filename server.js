@@ -1,6 +1,6 @@
 import express from 'express'
 import { createServer } from 'http'
-import { spawn } from 'child_process'
+import { fork } from 'child_process'
 import { toBuffer } from 'qrcode'
 
 const PORT = process.env.PORT || 3000
@@ -32,16 +32,25 @@ server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
 })
 
-// Iniciar el bot de WhatsApp como proceso hijo
+// Iniciar el bot de WhatsApp como proceso hijo usando fork()
 console.log('Iniciando bot de WhatsApp...')
-const botProcess = spawn('node', ['index.js'], {
-  stdio: 'inherit',
+const botProcess = fork('index.js', [], {
+  stdio: ['inherit', 'inherit', 'inherit'],
   env: { ...process.env, NODE_ENV: 'production' }
 })
 
 botProcess.on('exit', (code) => {
   console.log(`Bot process exited with code ${code}`)
-  process.exit(code || 0)
+  // Si el bot sale, reiniciar después de 5 segundos
+  if (code !== 0) {
+    console.log('Reiniciando bot en 5 segundos...')
+    setTimeout(() => {
+      const newBot = fork('index.js', [], {
+        stdio: ['inherit', 'inherit', 'inherit'],
+        env: { ...process.env, NODE_ENV: 'production' }
+      })
+    }, 5000)
+  }
 })
 
 botProcess.on('error', (err) => {
