@@ -1,6 +1,8 @@
 services:
   - type: web
     name: gatabot-md
-    env: docker
+    env: node
     region: Frankfurt
     plan: free
+    buildCommand: yarn install
+    startCommand: node server.js
