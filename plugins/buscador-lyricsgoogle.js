@@ -23,5 +23,4 @@ handler.limit = false
 }
 handler.command = handler.help = ['google-lyrics', 'lyricsgoogle', 'googlelyrics']
 handler.limit = 1
-handler.register = true
 export default handler

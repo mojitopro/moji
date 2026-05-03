@@ -167,6 +167,5 @@ handler.limit = 0
 handler.help = ['ytmp4doc', 'ytmp3doc', 'playaudiodoc', 'playvideodoc', 'playdoc', 'playdoc2'].map((v) => v + ' <búsqueda|link|#índice>')
 handler.tags = ['downloader']
 handler.command = /^(ytmp4doc|ytmp3doc|playaudiodoc|playdoc|playdoc2|playvideodoc)$/i
-handler.register = true
 
 export default handler

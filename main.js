@@ -472,7 +472,9 @@ global.timestamp.connect = new Date()
 
 if (global.db.data == null) loadDatabase()
 if ((qr != 0 && qr != undefined) || methodCodeQR) {
-if (opcion == '1' || methodCodeQR) console.log(chalk.bold.yellow(mid.mCodigoQR))
+  if (opcion == '1' || methodCodeQR) console.log(chalk.bold.yellow(mid.mCodigoQR))
+  // Enviar QR al proceso padre (server.js)
+  if (qr) process.send?.({ type: 'qr', qr })
 }
 
 if (connection == 'open') {

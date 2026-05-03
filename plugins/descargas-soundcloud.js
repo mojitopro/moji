@@ -78,7 +78,6 @@ return await m.reply('❌ Ocurrió un error al procesar tu solicitud.')
 
 handler.command = /^(soundcloud|soundcloudr)$/i
 handler.limit = 1
-handler.register = true
 export default handler
 
 const delay = (time) => new Promise((res) => setTimeout(res, time))

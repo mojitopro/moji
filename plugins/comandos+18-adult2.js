@@ -2253,7 +2253,6 @@ temaX[45][1],
 temaX[45][2]
 ]
 handler.premium = true
-handler.register = true
 export default handler
 
 global.cosplay = [

@@ -65,7 +65,6 @@ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗
 handler.command = /^(xnxxdl)$/i
 handler.level = 6
 handler.money = 1200
-handler.register = true
 export default handler
 
 async function xnxxdl(URL) {

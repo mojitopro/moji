@@ -65,5 +65,4 @@ thumbnail: imagen1
 handler.help = ['attp']
 handler.tags = ['sticker']
 handler.command = /^(attp|ttp|ttp2|ttp3|ttp4|attp2)$/i
-handler.register = true
 export default handler

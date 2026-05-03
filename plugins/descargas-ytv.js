@@ -79,7 +79,6 @@ await conn.reply(m.chat, `${lenguajeGB['smsMalError3']()}#report ${lenguajeGB['s
 }
 
 handler.command = /^video|fgmp4|dlmp4|getvid|yt(v|mp4)?$/i
-handler.register = true
 export default handler
 
 async function search(query, options = {}) {

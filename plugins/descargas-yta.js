@@ -137,7 +137,6 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
 }
 
 handler.command = /^audio|fgmp3|dlmp3|getaud|yt(a|mp3)$/i
-handler.register = true
 export default handler
 
 async function search(query, options = {}) {

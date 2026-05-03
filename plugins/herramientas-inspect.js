@@ -216,7 +216,6 @@ reportError(e)
 handler.help = ['superinspect', 'inspect']
 handler.tags = ['tools']
 handler.command = /^(superinspect|inspect|revisar|inspeccionar)$/i
-handler.register = true
 
 export default handler
 

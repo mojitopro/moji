@@ -31,6 +31,5 @@ handler.limit = false
 }
 handler.command = /^stickerpack$/i
 handler.limit = 1
-handler.register = true
 export default handler
 const delay = (time) => new Promise((res) => setTimeout(res, time))
