@@ -50,6 +50,7 @@ thumbnail: gataImg.getRandom()
 },
 {quoted: m}
 )
+await delay(3000)
 }
 throw `${lenguajeGB['smsAvisoEG']()}`
 }
@@ -60,3 +61,4 @@ handler.cookie = 1
 handler.limit = 1
 export default handler
 
+const delay = (time) => new Promise((res) => setTimeout(res, time))

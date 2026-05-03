@@ -15,6 +15,7 @@ sider.push(user)
 }
 }
 }
+const delay = (time) => new Promise((res) => setTimeout(res, time))
 
 switch (command) {
 case 'fantasmas':
@@ -32,6 +33,7 @@ await m.reply(
 null,
 {mentions: sider}
 )
+await delay(1 * 10000)
 let chat = global.db.data.chats[m.chat]
 chat.welcome = false
 try {
@@ -41,6 +43,7 @@ for (let user of users) {
 if (user.endsWith('@s.whatsapp.net') && !(participants.find((v) => areJidsSameUser(v.id, user)) || {admin: true}).admin) {
 let res = await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
 kickedGhost.concat(res)
+await delay(1 * 10000)
 }
 }
 } finally {
@@ -54,6 +57,7 @@ handler.group = handler.botAdmin = handler.admin = true
 handler.fail = null
 export default handler
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 //desarrollado por https://github.com/ReyEndymion
 //participa en desactivacion de despedida https://github.com/BrunoSobrino/

@@ -7,6 +7,7 @@ let nombre2 = '𝙂𝙖𝙩𝙖 𝘿𝙞𝙤𝙨'
 
 if (/^animada|animado|contento|contenta|alegría|alegrarse|alegremonos|emocionado|emocionada|feliz$/i.test(m.text)) {
 let stiker = await sticker(null, s[Math.floor(Math.random() * s.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -35,6 +36,7 @@ thumbnail: gataImg
 
 if (/^lindo|linda|cariño|love|corazon|bonita|bonito$/i.test(m.text)) {
 let stiker = await sticker(null, s2[Math.floor(Math.random() * s2.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -63,6 +65,7 @@ thumbnail: gataImg
 
 if (/^llorar|yorar|llorando|llorando|llorare|llorará|lloremos|llorastes|lloraste$/i.test(m.text)) {
 let stiker = await sticker(null, s3[Math.floor(Math.random() * s3.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -91,6 +94,7 @@ thumbnail: gataImg
 
 if (/^ok|de acuerdo|okey|okay|estoy de acuerdo|deacuerdo|👌$/i.test(m.text)) {
 let stiker = await sticker(null, s4[Math.floor(Math.random() * s4.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -119,6 +123,7 @@ thumbnail: gataImg
 
 if (/^papu$/i.test(m.text)) {
 let stiker = await sticker(null, s5[Math.floor(Math.random() * s5.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -147,6 +152,7 @@ thumbnail: gataImg
 
 if (/^payaso|🤡$/i.test(m.text)) {
 let stiker = await sticker(null, s6[Math.floor(Math.random() * s6.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -175,6 +181,7 @@ thumbnail: gataImg
 
 if (/^piensa|pensaré|pensó|🤔$/i.test(m.text)) {
 let stiker = await sticker(null, s7[Math.floor(Math.random() * s7.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -203,6 +210,7 @@ thumbnail: gataImg
 
 if (/^risa|xd|😂|🤣|🤪$/i.test(m.text)) {
 let stiker = await sticker(null, s8[Math.floor(Math.random() * s8.length)], nombre, nombre2)
+await delay(3 * 3000)
 if (stiker)
 conn.sendFile(
 m.chat,
@@ -235,6 +243,7 @@ handler.customPrefix =
 handler.command = new RegExp()
 handler.exp = 50
 export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const s = [
 'https://c.tenor.com/-8qgEEd80skAAAAi/chika.gif',

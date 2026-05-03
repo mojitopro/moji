@@ -5,6 +5,7 @@ let cc = text ? m : m.quoted ? await m.getQuotedObj() : false || m
 let teks = text ? text : cc.text
 let content = conn.cMod(m.chat, cc, /bc|broadcast/i.test(teks) ? teks : '*〔 𝗗𝗜𝗙𝗨𝗦𝗜𝗢𝗡 𝗔 𝗦𝗨𝗕 𝗕𝗢𝗧𝗦 〕*\n\n' + teks)
 for (let id of users) {
+await delay(1500)
 await conn.copyNForward(id, content, true)
 }
 conn.reply(
@@ -24,3 +25,4 @@ export default handler
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
 
+const delay = (time) => new Promise((res) => setTimeout(res, time))

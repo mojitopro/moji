@@ -14,6 +14,7 @@ if ((q.msg || q).seconds > 20)
 return m.reply(
 '╰⊱⚠️⊱ *𝘼𝘿𝙑𝙀𝙍𝙏𝙀𝙉𝘾𝙄𝘼 | 𝙒𝘼𝙍𝙉𝙄𝙉𝙂* ⊱⚠️⊱╮\n\nEl archivo que carga es demasiado grande, le sugerimos que corte el archivo grande a un archivo más pequeño, 10-20 segundos Los datos de audio son suficientes para identificar'
 )
+await conn.reply(m.chat, wait, m)
 let media = await q.download()
 let ext = mime.split('/')[1]
 fs.writeFileSync(`./tmp/${m.sender}.${ext}`, media)

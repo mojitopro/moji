@@ -2,6 +2,7 @@ import axios from 'axios'
 
 let handler = async (m, {conn, usedPrefix, command, text}) => {
 if (!text) throw `${lenguajeGB['smsAvisoMG']()}${mid.smsTikTok6}\n*${usedPrefix + command} Gata_Dios*`
+m.react('⏳')
 try {
 let {data: response} = await axios.get(`${apis}/search/tiktoksearch?query=${text}`)
 if (!response || !response.meta || !Array.isArray(response.meta) || response.meta.length === 0)

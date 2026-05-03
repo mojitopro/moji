@@ -42,6 +42,7 @@ handler.command = /^(broadcastchats?|bcc(hats?)?)$/i
 handler.owner = true
 
 export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)

@@ -38,12 +38,16 @@ let res8 = await conn.groupAcceptInvite(code8)
 let res9 = await conn.groupAcceptInvite(code9)
 
 await conn.sendMessage(res1, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res1}`)).participants.map(v => v.id) }, { quoted: fkontak })
+await delay(2 * 2000)
 await conn.sendMessage(res2, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res2}`)).participants.map(v => v.id) }, { quoted: fkontak })
 await conn.sendMessage(res3, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res3}`)).participants.map(v => v.id) }, { quoted: fkontak })
+await delay(2 * 2000)
 await conn.sendMessage(res4, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res4}`)).participants.map(v => v.id) }, { quoted: fkontak })
 await conn.sendMessage(res5, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res5}`)).participants.map(v => v.id) }, { quoted: fkontak })
+await delay(2 * 2000)
 await conn.sendMessage(res6, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res6}`)).participants.map(v => v.id) }, { quoted: fkontak })
 await conn.sendMessage(res7, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res7}`)).participants.map(v => v.id) }, { quoted: fkontak })
+await delay(2 * 2000)
 await conn.sendMessage(res8, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res8}`)).participants.map(v => v.id) }, { quoted: fkontak })
 await conn.sendMessage(res9, { text: text + '\n\n_atte. 𝗚𝗔𝗧𝗔 𝗗𝗜𝗢𝗦_', mentions: (await conn.groupMetadata(`${res9}`)).participants.map(v => v.id) }, { quoted: fkontak })
 await m.reply(`✅ *MENSAJE ENVIADO CON ÉXITO EN LOS GRUPOS* `)
@@ -60,3 +64,4 @@ handler.command = ['mensajeoficial2']
 handler.owner = true
 
 export default handler
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))*/
