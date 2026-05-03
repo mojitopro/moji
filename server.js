@@ -1,39 +1,61 @@
-import http from 'http'
+import express from 'express'
+import { createServer } from 'http'
+import { spawn } from 'child_process'
 import { toBuffer } from 'qrcode'
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 10000
+const app = express()
+const server = createServer(app)
+
+let _qr = 'QR no disponible aún'
 
 // Health check para Render
-const server = http.createServer(async (req, res) => {
-  if (req.url === '/health') {
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ status: 'ok', timestamp: Date.now() }))
-    return
-  }
-  
-  if (req.url === '/get-qr-code') {
-    res.writeHead(200, { 'Content-Type': 'image/png' })
-    try {
-      const qr = global.qr || 'invalid'
-      res.end(await toBuffer(qr))
-    } catch (e) {
-      res.end('')
-    }
-    return
-  }
-  
-  res.writeHead(200, { 'Content-Type': 'text/plain' })
-  res.end('GATA_BOT-MD en ejecución')
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', timestamp: Date.now() })
 })
 
+app.get('/get-qr-code', async (req, res) => {
+  res.setHeader('content-type', 'image/png')
+  try {
+    res.end(await toBuffer(_qr))
+  } catch (e) {
+    res.status(500).json({ error: e.message })
+  }
+})
+
+app.get('*', (req, res) => {
+  res.json("GATA_BOT-MD en ejecución")
+})
+
+// Iniciar servidor web
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
 })
 
-// Hacer que el QR esté disponible globalmente
-const originalConnect = global.conn?.ev
-if (originalConnect) {
-  global.conn.ev.on('connection.update', ({ qr }) => {
-    if (qr) global.qr = qr
-  })
-}
+// Iniciar el bot de WhatsApp como proceso hijo
+console.log('Iniciando bot de WhatsApp...')
+const botProcess = spawn('node', ['index.js'], {
+  stdio: 'inherit',
+  env: { ...process.env, NODE_ENV: 'production' },
+  detached: true
+})
+
+botProcess.on('exit', (code) => {
+  console.log(`Bot process exited with code ${code}`)
+  if (code !== 0) {
+    console.log('Reiniciando bot en 5 segundos...')
+    setTimeout(() => {
+      const newBot = spawn('node', ['index.js'], {
+        stdio: 'inherit',
+        env: { ...process.env, NODE_ENV: 'production' }
+      })
+    }, 5000)
+  }
+})
+
+botProcess.on('error', (err) => {
+  console.error('Error starting bot:', err)
+})
+
+// Mantener el proceso vivo
+setInterval(() => {}, 1000)
