@@ -7,3 +7,12 @@ package-lock.json
 yarn.lock
 database.json
 database/
+audio/
+media/
+GataBotSession/
+BackupSession/
+*.jpg
+*.mp3
+*.mp4
+*.bin
+tmp/
