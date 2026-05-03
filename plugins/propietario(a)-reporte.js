@@ -84,7 +84,6 @@ let reportText = text || (m.quoted && m.quoted.text) || '';
 let teks = `*╭━━[ 𝙍𝙀𝙋𝙊𝙍𝙏𝙀 | 𝙍𝙀𝙋𝙊𝙍𝙏 ]━━━⬣*\n*┃*\n*┃* *𝙉𝙐𝙈𝙀𝙍𝙊 | 𝙉𝙐𝙈𝘽𝙀𝙍*\n┃ ✦ Wa.me/${m.sender.split("@")[0]}\n*┃*\n*┃* *𝙈𝙀𝙉𝙎𝘼𝙅𝙀 | 𝙈𝙀𝙎𝙎𝘼𝙂𝙀*\n*┃* ✦ ${reportText}\n*┃*\n*╰━━━━━━━━━━━━━━━━━━⬣*\n\n> Responde al mensaje con: *"responder ${reportId} [mensaje]"* para interactuar con el usuarios.\n> Usa *.fin ${reportId}* para finalizar la conversación.`;
 
 await conn.sendMessage(OWNER1, { text: teks, mentions: [m.sender] }, { quoted: m });
-await delay(1000)
 await conn.reply(m.chat, `╰⊱💚⊱ *𝙀́𝙓𝙄𝙏𝙊 | 𝙎𝙐𝘾𝘾𝙀𝙎𝙎* ⊱💚⊱╮\n\n*El reporte ha sido enviado a mí Creadora. Tendrá una respuesta pronto. De ser Falso será Ignorado el reporte.*\n\n*The report has been sent to my Creator. You will have an answer soon. If false, the report will be ignored.*`);
 return;
 }};
@@ -182,7 +181,6 @@ handler.exp = 25
 handler.command = /^(report|request|reporte|bugs|bug|report-owner|reportes|reportar)$/i 
 handler.private = true
 export default handler
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 */
 let handler = async (m, {conn, text, usedPrefix, command}) => {

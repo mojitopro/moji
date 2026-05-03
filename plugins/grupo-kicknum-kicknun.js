@@ -10,7 +10,6 @@ let ps = participants.map((u) => u.id).filter((v) => v !== conn.user.jid && v.st
 let bot = global.db.data.settings[conn.user.jid] || {}
 if (ps == '') return m.reply(`${lenguajeGB['smsAvisoAG']()}𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊 𝙉𝙊 𝙃𝘼𝙔 𝙉𝙄𝙉𝙂𝙐𝙉 𝙉𝙐́𝙈𝙀𝙍𝙊 𝘾𝙊𝙉 𝙀𝙇 𝘼𝙍𝙀𝘼/𝙋𝙍𝙀𝙁𝙄𝙅𝙊 +${lol}*`)
 let numeros = ps.map((v) => '➥ @' + v.replace(/@.+/, ''))
-const delay = (time) => new Promise((res) => setTimeout(res, time))
 switch (command) {
 case 'listanum':
 conn.reply(m.chat, `⚠️ 𝙇𝙄𝙎𝙏𝘼 𝘿𝙀 𝙉𝙐𝙈𝙀𝙍𝙊𝙎 𝘾𝙊𝙉 𝙀𝙇 𝙋𝙍𝙀𝙁𝙄𝙅𝙊 +${lol} 𝙌𝙐𝙀 𝙀𝙎𝙏𝘼𝙉 𝙀𝙉 𝙀𝙇 𝙂𝙍𝙐𝙋𝙊 ⚠️\n\n` + numeros.join`\n`, m, {mentions: ps})
@@ -36,10 +35,8 @@ user !== isSuperAdmin &&
 isBotAdmin &&
 bot.restrict
 ) {
-await delay(2000)
 let responseb = await conn.groupParticipantsUpdate(m.chat, [user], 'remove')
 if (responseb[0].status === '404') m.reply(error, m.chat, {mentions: conn.parseMention(error)})
-await delay(10000)
 } else return m.reply(`${lenguajeGB['smsAvisoFG']()}`)
 }
 break

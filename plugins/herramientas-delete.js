@@ -29,7 +29,6 @@ let message = messagesToDelete[i]
 try {
 await conn.sendMessage(m.chat, {delete: message.key})
 deletedCount++
-await delay(100)
 } catch (err) {
 console.log('❌ No se pudo eliminar un mensaje:', err)
 }
@@ -48,4 +47,3 @@ handler.botAdmin = true
 
 export default handler
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

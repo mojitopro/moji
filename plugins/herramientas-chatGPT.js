@@ -70,7 +70,6 @@ await m.reply(response.result.response)
 try {
 async function getResponse(prompt) {
 try {
-await delay(1000)
 const response = await axios.post(
 'https://api.openai.com/v1/chat/completions',
 {model: 'gpt-4o-mini', messages: [{role: 'user', content: prompt}], max_tokens: 300},

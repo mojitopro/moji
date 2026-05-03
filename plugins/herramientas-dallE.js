@@ -14,7 +14,6 @@ const prompt = args.join(' ')
 const apiUrl = `https://eliasar-yt-api.vercel.app/api/ai/text2img?prompt=${prompt}`
 
 try {
-await m.react('⏳')
 await conn.sendMessage(m.chat, {text: '*⌛ ESPERE UN MOMENTO POR FAVOR...*'}, {quoted: m})
 
 const response = await axios.get(apiUrl, {responseType: 'arraybuffer'})

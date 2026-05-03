@@ -49,7 +49,6 @@ mentions: (await conn.groupMetadata(`${res}`)).participants.map((v) => v.id)
 },
 {quoted: fkontak}
 )
-await delay(3 * 3000)
 await conn.sendMessage(
 res2,
 {
@@ -99,4 +98,3 @@ handler.command = ['mensajeoficial']
 handler.owner = true
 export default handler
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))

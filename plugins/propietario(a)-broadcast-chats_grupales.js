@@ -34,7 +34,6 @@ id,
 {text: infoGP + teks2, mentions: [m.sender], mentions: (await conn.groupMetadata(id)).participants.map((v) => v.id)},
 {quoted: fkontak}
 )
-//await conn.reply(id, infoGP + teks2, { mentions: (await conn.groupMetadata(id)).participants.map(v => v.id) }, { quoted: fkontak });
 }, delay)
 }
 let totalGP = groups.length
@@ -48,4 +47,3 @@ export default handler
 
 const more = String.fromCharCode(8206)
 const readMore = more.repeat(4001)
-const delay = (time) => new Promise((res) => setTimeout(res, time))

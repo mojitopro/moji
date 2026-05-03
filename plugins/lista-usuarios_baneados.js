@@ -18,7 +18,6 @@ let caption = `
 │ *Estos usuarios no puedes Usar a GataBot*
 *╰•·–––––––––––––––––––·•*`.trim()
 
-await conn.reply(m.chat, caption, m, {mentions: await conn.parseMention(caption)})
 }
 /*conn.sendButton(m.chat, caption, `*Estos usuarios no puedes Usar a GataBot*\n\n` + wm, null, [ 
 ['𝗠 𝗘 𝗡 𝗨 ☘️', '/menu']], m, { mentions: await conn.parseMention(caption) })}*/

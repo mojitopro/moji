@@ -42,10 +42,8 @@ const portada = api.data.image
 const scLink = api.data.link
 const autor = api.data.author
 
-await delay(2000)
 await conn.sendMessage(m.chat, {image: {url: portada}, caption: `Espera por favor...\n\nEnviando: ${ddname}\n\n${wm}`}, {quoted: m})
 
-await delay(15000)
 await conn.sendMessage(
 m.chat,
 {
@@ -80,4 +78,3 @@ handler.command = /^(soundcloud|soundcloudr)$/i
 handler.limit = 1
 export default handler
 
-const delay = (time) => new Promise((res) => setTimeout(res, time))

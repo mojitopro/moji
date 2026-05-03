@@ -32,7 +32,6 @@ handler.command = /^(githubstalk)$/i
 
 export default handler
 
-const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 async function githubstalk(user) {
 return new Promise((resolve, reject) => {

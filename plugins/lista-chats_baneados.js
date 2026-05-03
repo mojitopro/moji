@@ -16,7 +16,6 @@ let caption = `*╭•·––| 💬 𝘾𝙃𝘼𝙏𝙎 𝘽𝘼𝙉𝙀𝘼�
       : ''
   }
 *╰•·–––––––––––––––––––·•*`
-await conn.reply(m.chat, caption, m, {mentions: await conn.parseMention(caption)})
 }
 /*await conn.sendButton(m.chat, caption, wm, null, [ 
 ['𝗠 𝗘 𝗡 𝗨 ☘️', '/menu']], m, { mentions: await conn.parseMention(caption) })}*/

@@ -7,7 +7,6 @@ let mime = (q.msg || q).mimetype || q.mediaType || ''
 if (/image/g.test(mime) && !/webp/g.test(mime)) {
 let buffer = await q.download()
 
-await m.reply(wait)
 
 let media = await uploader(buffer)
 let json = await (await fetch(`https://aemt.me/bardimg?url=${media}&text=${text}`)).json()
