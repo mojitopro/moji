@@ -1146,9 +1146,6 @@ m.id.startsWith('FizzxyTheGreat-')
 return
 
 if (opts['nyimak']) return
-if (opts['pconly'] && m.chat.endsWith('g.us')) return
-if (opts['gconly'] && !m.chat.endsWith('g.us')) return
-if (opts['swonly'] && m.chat !== 'status@broadcast') return
 if (typeof m.text !== 'string') m.text = ''
 
 m.exp += Math.ceil(Math.random() * 10)
@@ -1878,7 +1875,6 @@ break
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['groups.update']} groupsUpdate
  */
 export async function groupsUpdate(groupsUpdate) {
-if (opts['self'] && !isOwner && !isROwner) return
 for (const groupUpdate of groupsUpdate) {
 const id = groupUpdate.id
 if (!id) continue
@@ -1917,7 +1913,6 @@ await this.updateBlockStatus(nk.from, 'block')
 export async function deleteUpdate(message) {
 try {
 const {fromMe, id, participant, remoteJid} = message
-if (fromMe) return
 let msg = this.serializeM(this.loadMessage(id))
 console.log(msg)
 let chat = global.db.data.chats[msg?.chat] || {}
