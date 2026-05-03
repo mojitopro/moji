@@ -1336,12 +1336,6 @@ user.antispam++
 return
 }
 if (user.antispam2 && isROwner) return
-let time = global.db.data.users[m.sender].spam + 3000
-if (new Date() - global.db.data.users[m.sender].spam < 3000) {
-console.log('[ SPAM ]')
-continue
-}
-global.db.data.users[m.sender].spam = new Date() * 1
 }
 
 let hl = _prefix
