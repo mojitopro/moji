@@ -1,0 +1,50 @@
+diff --git a/node_modules/@bochilteam/scraper-images/lib/esm/src/google-image.js b/node_modules/@bochilteam/scraper-images/lib/esm/src/google-image.js
+index e7ff321..84f0fb1 100644
+--- a/node_modules/@bochilteam/scraper-images/lib/esm/src/google-image.js
++++ b/node_modules/@bochilteam/scraper-images/lib/esm/src/google-image.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { GoogleImageSchema } from '../types/index.js';
+ import { DEFAULT_HEADERS } from './constant.js';
+diff --git a/node_modules/@bochilteam/scraper-images/lib/esm/src/pinterest.js b/node_modules/@bochilteam/scraper-images/lib/esm/src/pinterest.js
+index cbf85cd..4311384 100644
+--- a/node_modules/@bochilteam/scraper-images/lib/esm/src/pinterest.js
++++ b/node_modules/@bochilteam/scraper-images/lib/esm/src/pinterest.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { PinterestSchema } from '../types/index.js';
+ import { DEFAULT_HEADERS } from './constant.js';
+diff --git a/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker-telegram.js b/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker-telegram.js
+index 5ee017b..f4cc0f0 100644
+--- a/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker-telegram.js
++++ b/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker-telegram.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { StickerTelegramSchema } from '../types/index.js';
+ import { DEFAULT_HEADERS } from './constant.js';
+diff --git a/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker.js b/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker.js
+index c5cc9be..5b46664 100644
+--- a/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker.js
++++ b/node_modules/@bochilteam/scraper-images/lib/esm/src/sticker.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { StickerLineSchema, StickerTelegramSchema } from '../types/index.js';
+ import { DEFAULT_HEADERS } from './constant.js';
+diff --git a/node_modules/@bochilteam/scraper-images/lib/esm/src/wallpaper.js b/node_modules/@bochilteam/scraper-images/lib/esm/src/wallpaper.js
+index 85979da..7124f49 100644
+--- a/node_modules/@bochilteam/scraper-images/lib/esm/src/wallpaper.js
++++ b/node_modules/@bochilteam/scraper-images/lib/esm/src/wallpaper.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { WallpaperSchema } from '../types/index.js';
+ import { DEFAULT_HEADERS } from './constant.js';

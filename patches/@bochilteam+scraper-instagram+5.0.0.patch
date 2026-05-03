@@ -1,0 +1,22 @@
+diff --git a/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramdl-v1.js b/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramdl-v1.js
+index b7b262a..16f8df0 100644
+--- a/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramdl-v1.js
++++ b/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramdl-v1.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { DEFAULT_HEADERS } from './constant.js';
+ import { InstagramdlArgsSchema, InstagramdlSchema } from '../types/instagramdl-v1.js';
+ export default async function instagramdl(url) {
+diff --git a/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramstory-v1.js b/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramstory-v1.js
+index 439df53..b7701d0 100644
+--- a/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramstory-v1.js
++++ b/node_modules/@bochilteam/scraper-instagram/lib/esm/src/instagramstory-v1.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { DEFAULT_HEADERS } from './constant.js';
+ import { InstagramStoryArgsSchema, InstagramStorySchema } from '../types/instagramstory-v1.js';
+ import crypto from 'crypto';

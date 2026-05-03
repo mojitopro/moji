@@ -1,0 +1,76 @@
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/KBBI.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/KBBI.js
+index 18e4321..335ffce 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/KBBI.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/KBBI.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { KbbiArgsSchema, KbbiSchema } from '../types/index.js';
+ /**
+  * p = Partikel: kelas kata yang meliputi kata depan, kata sambung, kata seru, kata sandang, ucapan salam
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/bioskop.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/bioskop.js
+index 18a9c23..d368a61 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/bioskop.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/bioskop.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { BioskopArgsSchema, BioskopSchema, BioskopNowSchema } from '../types/index.js';
+ export async function bioskopNow() {
+     const url = 'https://jadwalnonton.com/now-playing/';
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/chord.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/chord.js
+index b9995de..a7cbfe3 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/chord.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/chord.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { ChordArgsSchema, ChordSchema } from '../types/index.js';
+ export async function chord(query) {
+     ChordArgsSchema.parse(arguments);
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/jadwal-tv.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/jadwal-tv.js
+index 51ef3e7..7288535 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/jadwal-tv.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/jadwal-tv.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { JadwalTVArgsSchema, JadwalTVNOWSchema, JadwalTVSchema } from '../types/index.js';
+ export const listJadwalTV = (async () => await got('https://raw.githubusercontent.com/BochilTeam/scraper/master/data/jadwal-tv.json').json())();
+ export default async function jadwalTV(channel) {
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/kodepos.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/kodepos.js
+index 10e00d1..3d56688 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/kodepos.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/kodepos.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { KodePosArgsSchema, KodePosSchema } from '../types/kodepos.js';
+ import { DEFAULT_HEADERS } from './constant.js';
+ export default async function kodepos(query) {
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/lyrics.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/lyrics.js
+index 6b00447..6b27bb6 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/lyrics.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/lyrics.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { LyricsArgsSchema, LyricsSchema } from '../types/index.js';
+ import { generateMusixmatchHash } from './util.js';
+ export async function lyrics(query) {
+diff --git a/node_modules/@bochilteam/scraper-others/lib/esm/src/wikipedia.js b/node_modules/@bochilteam/scraper-others/lib/esm/src/wikipedia.js
+index 9055785..b1b7f90 100644
+--- a/node_modules/@bochilteam/scraper-others/lib/esm/src/wikipedia.js
++++ b/node_modules/@bochilteam/scraper-others/lib/esm/src/wikipedia.js
+@@ -1,4 +1,4 @@
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import got from 'got';
+ import { WikipediaArgsSchema, WikipediaSchema } from '../types/index.js';
+ export default async function wikipedia(query, lang = 'id') {
