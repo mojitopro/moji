@@ -9,13 +9,10 @@
     "src": "src",
     "plugins": "plugins"
   },
-  "scripts": {
-    "start": "node index.js",
-    "qr": "node index.js qr",
-    "code": "node index.js code",
-    "test": "node test.js",
-    "test2": "nodemon index.js"
-  },
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "postinstall": "find node_modules/@bochilteam -name '*.js' -exec sed -i \"s/import cheerio from 'cheerio'/import * as cheerio from 'cheerio'/g\" {} + 2>/dev/null || true"
+},
   "homepage": "https://github.com/GataNina-Li/GataBot-MD",
   "author": {
     "name": "GataNina-Li"
@@ -72,6 +69,7 @@
     "node-webpmux": "^3.1.1",
     "openai": "^3.3.0",
     "p-queue": "^8.1.0",
+    "patch-package": "^8.0.1",
     "performance-now": "^2.1.0",
     "pino": "^7.8.0",
     "qrcode": "^1.5.0",
