@@ -30,6 +30,13 @@ resolve()
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate
  */
 export async function handler(chatUpdate) {
+  // Test if sendMessage works
+  try {
+    const testMsg = chatUpdate?.messages?.[0]
+    if (testMsg?.key?.remoteJid) {
+      await this.sendMessage(testMsg.key.remoteJid, {text: '[BOT] Mensaje recibido'}).catch(e => console.error('[TEST] Send failed:', e))
+    }
+  } catch(e) { console.error('[TEST] Error:', e) }
   console.log('[HANDLER] Received update:', chatUpdate?.messages?.[0]?.key?.remoteJid)
 this.msgqueque = this.msgqueque || []
 this.uptime = this.uptime || Date.now()
