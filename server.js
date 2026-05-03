@@ -1,61 +1,39 @@
-import express from 'express'
-import { createServer } from 'http'
-import { fork } from 'child_process'
+import http from 'http'
 import { toBuffer } from 'qrcode'
 
 const PORT = process.env.PORT || 3000
-const app = express()
-const server = createServer(app)
-
-let _qr = 'QR no disponible aún'
 
 // Health check para Render
-app.get('/health', (req, res) => {
-  res.json({ status: 'ok', timestamp: Date.now() })
-})
-
-app.get('/get-qr-code', async (req, res) => {
-  res.setHeader('content-type', 'image/png')
-  try {
-    res.end(await toBuffer(_qr))
-  } catch (e) {
-    res.status(500).json({ error: e.message })
+const server = http.createServer(async (req, res) => {
+  if (req.url === '/health') {
+    res.writeHead(200, { 'Content-Type': 'application/json' })
+    res.end(JSON.stringify({ status: 'ok', timestamp: Date.now() }))
+    return
   }
+  
+  if (req.url === '/get-qr-code') {
+    res.writeHead(200, { 'Content-Type': 'image/png' })
+    try {
+      const qr = global.qr || 'invalid'
+      res.end(await toBuffer(qr))
+    } catch (e) {
+      res.end('')
+    }
+    return
+  }
+  
+  res.writeHead(200, { 'Content-Type': 'text/plain' })
+  res.end('GATA_BOT-MD en ejecución')
 })
 
-app.get('*', (req, res) => {
-  res.json("GATA_BOT-MD en ejecución")
-})
-
-// Iniciar servidor web
 server.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`)
 })
 
-// Iniciar el bot de WhatsApp como proceso hijo usando fork()
-console.log('Iniciando bot de WhatsApp...')
-const botProcess = fork('index.js', [], {
-  stdio: ['inherit', 'inherit', 'inherit', 'ipc'],
-  env: { ...process.env, NODE_ENV: 'production' }
-})
-
-botProcess.on('exit', (code) => {
-  console.log(`Bot process exited with code ${code}`)
-  // Si el bot sale, reiniciar después de 5 segundos
-  if (code !== 0) {
-    console.log('Reiniciando bot en 5 segundos...')
-    setTimeout(() => {
-      const newBot = fork('index.js', [], {
-        stdio: ['inherit', 'inherit', 'inherit'],
-        env: { ...process.env, NODE_ENV: 'production' }
-      })
-    }, 5000)
-  }
-})
-
-botProcess.on('error', (err) => {
-  console.error('Error starting bot:', err)
-})
-
-// Mantener el proceso vivo
-setInterval(() => {}, 1000)
+// Hacer que el QR esté disponible globalmente
+const originalConnect = global.conn?.ev
+if (originalConnect) {
+  global.conn.ev.on('connection.update', ({ qr }) => {
+    if (qr) global.qr = qr
+  })
+}

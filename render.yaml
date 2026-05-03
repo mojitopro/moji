@@ -5,4 +5,4 @@ services:
     region: Frankfurt
     plan: free
     buildCommand: npm install --production
-    startCommand: node server.js
+    startCommand: node index.js
