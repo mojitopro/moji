@@ -12,7 +12,7 @@ import { ar, en, es, id, pt } from './lib/idiomas/total-idiomas.js'
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // [ES] > Agrega el número que será Bot y los que serán propietarios.
 // [EN] > Add the number that will be Bot and those that will be owners.
-global.owner = [
+global.owner = ['$YOUR_NUMBER'] // Add your number here
 '5214531287294', 
 '593968263524',
 '5492916450307',
@@ -34,7 +34,7 @@ global.isBaileysFail = false
 //Kurt18: Obtener el código QR por la URL del Hosting
 global.obtenerQrWeb = 0 //Solo valores: 1 o 0
 //Kurt18: Aplica para Host Render.com
-global.keepAliveRender = 0 //Solo valores: 1 o 0
+global.keepAliveRender = 1 //Solo valores: 1 o 0
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
@@ -67,13 +67,13 @@ global.baileys = '@whiskeysockets/baileys'
 global.apis = 'https://api.delirius.store'
 
 global.APIs = {
-lolhuman: {url: 'https://api.lolhuman.xyz/api', key: 'GataDiosV3'},
-stellar: {url: 'https://api.stellarwa.xyz', key: 'GataDios'},
-skizo: {url: 'https://skizo.tech/api', key: 'GataDios'},
+lolhuman: {url: 'https://api.lolhuman.xyz/api', key: 'Brian MartinsV3'},
+stellar: {url: 'https://api.stellarwa.xyz', key: 'Brian Martins'},
+skizo: {url: 'https://skizo.tech/api', key: 'Brian Martins'},
 alyachan: {url: 'https://api.alyachan.dev/api', key: null},
-exonity: {url: 'https://exonity.tech/api', key: 'GataDios'},
+exonity: {url: 'https://exonity.tech/api', key: 'Brian Martins'},
 ryzendesu: {url: 'https://api.ryzendesu.vip/api', key: null},
-neoxr: {url: 'https://api.neoxr.eu/api', key: 'GataDios'},
+neoxr: {url: 'https://api.neoxr.eu/api', key: 'Brian Martins'},
 davidcyriltech: {url: 'https://api.davidcyriltech.my.id', key: null},
 dorratz: {url: 'https://api.dorratz.com', key: null},
 siputzx: {url: 'https://api.siputzx.my.id/api', key: null},
@@ -97,8 +97,8 @@ global.moment = moment
 // [EN] > Adding yourself, collaborators or helpers will appear in the contact list command.
 global.official = [
 // Agregate si eres Owner
-['593968263524', 'Gata Dios 💻', 1],
-['573147616444', '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1],
+['593968263524', 'Brian Martins', 1],
+['573147616444', 'Brian Martins 💻', 1],
 ['5521989092076', '𝗗𝗲𝘀𝗮𝗿𝗿𝗼𝗹𝗹𝗮𝗱𝗼𝗿𝗮 𝗢𝗳𝗶𝗰𝗶𝗮𝗹 💻', 1]
 ]
 
@@ -108,9 +108,8 @@ global.desc2 = '' // Add long description (90 caractres max) (Este parámetro se
 global.country = '' // Add country, example: 🇪🇨
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 
-global.packname = '╭ ☆ㅤⱮօلìէօ-𝗠𝗗 🐈\n┃\n┃ » 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖:\n┃ @globalgb\n┃\n┃ » 𝚈𝚘𝚞𝚃𝚞𝚋𝚎:\n┃ @gatadios\n┃\n┃ » 𝙸𝚗𝚜𝚝𝚊𝚐𝚛𝚊𝚖:\n┃ @gata_dios\n╰━━━━━━━━•' //"☆ㅤⱮօلìէօ-𝗠𝗗"
-global.author =
-' ╭ ☆ㅤⱮօلìէօ ✓\n ┃\n ┃ » 𝙶𝚒𝚝𝙷𝚞𝚋:\n ┃ GataNina-Li\n ┃\n ┃ ⊹ Super Bot WhatsApp.\n ┃\n ┃ ♡ Apoyo\n ┃ » 𝙿𝚊𝚢𝙿𝚊𝚕:\n ┃ @OficialGD\n ╰━━━━━━━━•' //"☆ㅤⱮօلìէօ"
+global.packname = '☆ㅤⱮօلìڧօ'
+global.author = '© MoJiTo - Brian Martins'
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
 // [ES] > INFORMACIÓN DE VERSIONES DEL BOT, POR FAVOR
@@ -118,7 +117,7 @@ global.author =
 // [EN] > BOT VERSION INFORMATION, PLEASE KEEP THIS UNCHANGED, WE STRIVE DAILY TO PROVIDE YOU WITH A BOT FOR THE COMMUNITY, BE GRATEFUL
 global.vs = '1.7.0'
 global.vsJB = '5.0 (Beta)'
-global.gt = '☆ㅤⱮօلìէօ-𝗠𝗗'
+global.gt = '© MoJiTo'
 global.imagen = fs.readFileSync('./Menu2.jpg')
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
@@ -145,8 +144,8 @@ global.eg = '╰⊱💚⊱ *𝙀́𝙓𝙄𝙏𝙊 | 𝙎𝙐𝘾𝘾𝙀𝙎�
 global.exito = eg
 
 // • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •
-global.wm = '☆ㅤⱮօلìէօ-𝗠𝗗 : ☆ㅤⱮօلìէօ'
-global.igfg = '☆ㅤⱮօلìէօ-𝗠𝗗'
+global.wm = '© MoJiTo : ☆ㅤⱮօلìէօ'
+global.igfg = '© MoJiTo'
 global.nomorown = '593993684821'
 global.pdoc = [
 'application/vnd.openxmlformats-officedocument.presentationml.presentation',
@@ -624,19 +623,19 @@ console.log(chalk.redBright("Update 'config.js'"))
 import(`${file}?update=${Date.now()}`)
 })
 
-global.yt = 'https://youtube.com/@gatadios'
-global.ig = 'https://www.instagram.com/gata_dios'
-global.md = 'https://github.com/GataNina-Li/GataBot-MD'
+global.yt = 'https://youtube.com/@mojito'
+global.ig = 'https://www.instagram.com/mojito'
+global.md = 'https://github.com/MoJiTo/GataBot-MD'
 global.fb = 'https://www.facebook.com/groups/872989990425789'
-global.tk = 'https://www.tiktok.com/@gata_dios'
-global.ths = 'https://www.threads.net/@gata_dios'
-global.paypal = 'https://paypal.me/OficialGD'
+global.tk = 'https://www.tiktok.com/@mojito'
+global.ths = 'https://www.threads.net/@mojito'
+global.paypal = 'https://paypal.me/MoJiTo'
 global.asistencia = 'https://wa.me/message/MEKOUFBEOG5ED1'
 global.all = 'https://www.atom.bio/GataBot'
 global.canal1 = 'https://whatsapp.com/channel/0029Va4QjH7DeON0ePwzjS1A'
 global.canal2 = 'https://whatsapp.com/channel/0029Va6yY0iLY6d6XDmqA03g'
 global.canal3 = 'https://whatsapp.com/channel/0029VaKn22pDJ6GwY61Ftn15'
-global.canal4 = 'https://t.me/globalgb'
+global.canal4 = 'https://t.me/MoJiTo'
 
 global.soporteGB = 'https://chat.whatsapp.com/GQ82mPnSYnm0XL2hLPk7FV'
 global.grupo1 = 'https://chat.whatsapp.com/JRG6rVJJV40IxlI1wjQ0E9'
