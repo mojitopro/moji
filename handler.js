@@ -1146,7 +1146,6 @@ m.id.startsWith('FizzxyTheGreat-')
 return
 
 if (opts['nyimak']) return
-if (!isROwner && opts['self']) return
 if (opts['pconly'] && m.chat.endsWith('g.us')) return
 if (opts['gconly'] && !m.chat.endsWith('g.us')) return
 if (opts['swonly'] && m.chat !== 'status@broadcast') return
@@ -1770,7 +1769,6 @@ return list[Math.floor(Math.random() * list.length)]
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['group-participants.update']} groupsUpdate
  */
 export async function participantsUpdate({id, participants, action}) {
-if (opts['self']) return
 // if (id in conn.chats) return // First login will spam
 if (this.isInit) return
 if (global.db.data == null) await loadDatabase()
