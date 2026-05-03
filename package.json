@@ -11,8 +11,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "postinstall": "patch-package"
+    "start": "node index.js"
   },
   "homepage": "https://github.com/GataNina-Li/GataBot-MD",
   "author": {

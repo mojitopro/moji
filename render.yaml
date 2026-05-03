@@ -4,5 +4,5 @@ services:
     env: node
     region: Frankfurt
     plan: free
-    buildCommand: yarn install
+    buildCommand: npm install
     startCommand: node index.js
