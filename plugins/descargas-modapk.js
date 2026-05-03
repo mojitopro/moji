@@ -1,6 +1,6 @@
 import { download, search } from 'aptoide-scraper'
 import axios from 'axios'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 const handler = async (m, {conn, usedPrefix, command, text}) => {
 if (!text) throw `${lenguajeGB['smsAvisoMG']()} ${mid.smsApk}`
 try {

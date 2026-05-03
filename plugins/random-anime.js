@@ -1,5 +1,5 @@
 import axios from 'axios'
-import cheerio from 'cheerio'
+import * as cheerio from 'cheerio'
 import hispamemes from 'hispamemes'
 const handler = async (m, {command, conn, usedPrefix}) => {
 const apikey = global.keysxxx
