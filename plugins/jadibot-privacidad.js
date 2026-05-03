@@ -35,5 +35,4 @@ global.db.data.users[bot.user.jid] = botConfig
 }
 handler.command = handler.help = ['setconfig']
 handler.tags = ['jadibot']
-handler.register = true
 export default handler

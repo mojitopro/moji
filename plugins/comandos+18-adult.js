@@ -663,7 +663,6 @@ handler.command = [
 ]
 //handler.level = 5
 //handler.limit = 2
-handler.register = true
 export default handler
 
 global.pack = [

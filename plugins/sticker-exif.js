@@ -16,5 +16,4 @@ m.reply(
 handler.help = ['exif <packname> | <author>']
 handler.tags = ['sticker']
 handler.command = ['exif']
-handler.register = true
 export default handler

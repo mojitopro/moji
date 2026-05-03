@@ -154,7 +154,6 @@ handler.command = [
 'nsfwvidrandom'
 ]
 handler.premium = true
-handler.register = true
 export default handler
 
 global.pornovid = [
