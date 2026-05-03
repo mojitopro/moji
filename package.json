@@ -9,11 +9,11 @@
     "src": "src",
     "plugins": "plugins"
   },
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-  "postinstall": "find node_modules/@bochilteam -name '*.js' -exec sed -i \"s/import cheerio from 'cheerio'/import * as cheerio from 'cheerio'/g\" {} + 2>/dev/null || true"
-},
+    "postinstall": "patch-package"
+  },
   "homepage": "https://github.com/GataNina-Li/GataBot-MD",
   "author": {
     "name": "GataNina-Li"

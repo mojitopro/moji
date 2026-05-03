@@ -1,0 +1,22 @@
+diff --git a/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/gempa.js b/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/gempa.js
+index f7a9e06..ce23f49 100644
+--- a/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/gempa.js
++++ b/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/gempa.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { GempaNowSchema, GempaRealtimeSchema, GempaSchema } from '../types/index.js';
+ export async function gempa() {
+     const html = await got('https://www.bmkg.go.id/gempabumi/gempabumi-dirasakan.bmkg').text();
+diff --git a/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/tsunami.js b/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/tsunami.js
+index a8ffee9..075964c 100644
+--- a/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/tsunami.js
++++ b/node_modules/@bochilteam/scraper-bmkg/lib/esm/src/tsunami.js
+@@ -1,5 +1,5 @@
+ import got from 'got';
+-import cheerio from 'cheerio';
++import * as cheerio from 'cheerio';
+ import { TsunamiSchema } from '../types/index.js';
+ export default async function tsunami() {
+     const html = await got('https://www.bmkg.go.id/tsunami/').text();
