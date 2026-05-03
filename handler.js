@@ -30,6 +30,7 @@ resolve()
  * @param {import('@adiwajshing/baileys').BaileysEventMap<unknown>['messages.upsert']} groupsUpdate
  */
 export async function handler(chatUpdate) {
+  console.log('[HANDLER] Received update:', chatUpdate?.messages?.[0]?.key?.remoteJid)
 this.msgqueque = this.msgqueque || []
 this.uptime = this.uptime || Date.now()
 if (!chatUpdate) {
@@ -1068,6 +1069,7 @@ fin: '23:59'
 }
 }
 let settings = global.db.data.settings[this.user.jid]
+settings.self = false; // Force self mode off
 if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
 if (settings) {
 if (!('autoread' in settings)) settings.autoread = false
