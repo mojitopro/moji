@@ -90,7 +90,7 @@ body: '👋 ' + username,
 mediaUrl: ig,
 description: 'Hola',
 previewType: 'PHOTO',
-thumbnail: await (await fetch(gataMenu)).buffer(),
+thumbnail: await (await fetch(gataMenu)).arrayBuffer(),
 sourceUrl: redesMenu
 }
 }

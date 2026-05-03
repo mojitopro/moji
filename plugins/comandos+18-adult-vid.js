@@ -7,7 +7,7 @@ externalAdReply: {
 title: wm,
 body: lenguajeGB.smsCont18PornP2(),
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 }

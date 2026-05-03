@@ -159,7 +159,7 @@ let audioBuffer
 if (typeof mediaData === 'string') {
   const res = await fetch(mediaData)
   if (!res.ok) throw new Error(`Error al descargar audio: ${res.status}`)
-  audioBuffer = await res.buffer()
+  audioBuffer = await res.arrayBuffer()
 } else {
   audioBuffer = mediaData
 }

@@ -45,7 +45,7 @@ let res2 = `https://api.lolhuman.xyz/api/pptiktok/${text}?apikey=${lolkeysapi}`
 let json = await res.json()
 if (res.status !== 200) throw await res.text()
 if (!json.status) throw json
-let thumb = await (await fetch(json.result.user_picture)).buffer()
+let thumb = await (await fetch(json.result.user_picture)).arrayBuffer()
 let gata = `👤 ${mid.user} 
 ${json.result.username}
 ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈

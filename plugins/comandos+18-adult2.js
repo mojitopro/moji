@@ -54,7 +54,7 @@ const temaX = [
 let handler = async (m, {command, conn, usedPrefix}) => {
 let frep = {
 contextInfo: {
-externalAdReply: {title: wm, body: lenguajeGB.smsCont18PornP2(), sourceUrl: redesMenu, thumbnail: await (await fetch(img16)).buffer()}
+externalAdReply: {title: wm, body: lenguajeGB.smsCont18PornP2(), sourceUrl: redesMenu, thumbnail: await (await fetch(img16)).arrayBuffer()}
 }
 }
 let user = global.db.data.users[m.sender]
@@ -109,7 +109,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -164,7 +164,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -218,7 +218,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -273,7 +273,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -334,7 +334,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -395,7 +395,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -456,7 +456,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -517,7 +517,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -578,7 +578,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -639,7 +639,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -700,7 +700,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -761,7 +761,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -822,7 +822,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -883,7 +883,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -944,7 +944,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1005,7 +1005,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1066,7 +1066,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1133,7 +1133,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1194,7 +1194,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1255,7 +1255,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1316,7 +1316,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1377,7 +1377,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1438,7 +1438,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1499,7 +1499,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1559,7 +1559,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1600,7 +1600,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1640,7 +1640,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1680,7 +1680,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1720,7 +1720,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1760,7 +1760,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1801,7 +1801,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1842,7 +1842,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1883,7 +1883,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -1925,7 +1925,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },

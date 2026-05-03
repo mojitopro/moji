@@ -11,7 +11,7 @@ externalAdReply: {
 title: wm,
 body: lenguajeGB.smsCont18Porn2(),
 sourceUrl: redesMenu.getRandom(),
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 }
@@ -296,7 +296,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -351,7 +351,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },
@@ -410,7 +410,7 @@ title: lenguajeGB.smsCont18PornP2(),
 body: wm,
 mediaType: 2,
 sourceUrl: redesMenu,
-thumbnail: await (await fetch(img16)).buffer()
+thumbnail: await (await fetch(img16)).arrayBuffer()
 }
 }
 },

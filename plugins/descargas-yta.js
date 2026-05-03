@@ -60,7 +60,7 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
     // Descargar buffer directamente para evitar URLs expiradas
     const audioRes = await fetch(audioUrl)
     if (!audioRes.ok) throw new Error(`Error al descargar audio: ${audioRes.status}`)
-    const audioBuffer = await audioRes.buffer()
+    const audioBuffer = await audioRes.arrayBuffer()
     if (!audioBuffer || audioBuffer.length === 0) throw new Error('Buffer de audio vacío o inválido')
 
     const fileName = `${sanitizeFilename(yt_play?.[0]?.title || 'audio')}.mp3`
@@ -100,7 +100,7 @@ let handler = async (m, { text, conn, args, usedPrefix, command }) => {
       // Descargar buffer directamente
       const audioRes = await fetch(audioUrl)
       if (!audioRes.ok) throw new Error(`Error al descargar audio de Sanka: ${audioRes.status}`)
-      const audioBuffer = await audioRes.buffer()
+      const audioBuffer = await audioRes.arrayBuffer()
       if (!audioBuffer || audioBuffer.length === 0) throw new Error('Buffer de audio de Sanka vacío')
 
       if (audioBuffer.length > LimitAud) {

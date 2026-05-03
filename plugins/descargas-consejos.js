@@ -3,7 +3,7 @@ import fetch from 'node-fetch'
 import axios from 'axios'
 
 let handler = async (m, {conn, usedPrefix, command}) => {
-//let frep = { contextInfo: { externalAdReply: {title: wm, body: author, sourceUrl: redesMenu.getRandom(), thumbnail: await(await fetch(gataMenu.getRandom())).buffer() }}}
+//let frep = { contextInfo: { externalAdReply: {title: wm, body: author, sourceUrl: redesMenu.getRandom(), thumbnail: await(await fetch(gataMenu.getRandom())).arrayBuffer() }}}
 try {
 if (command == 'consejo' || command == 'advice') {
 let img = 'https://img.freepik.com/vector-premium/caracter-gato-ilustracion-hoja-trebol_75474-1263.jpg'

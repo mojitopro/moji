@@ -100,7 +100,7 @@ jpegThumbnail: fs.readFileSync('./media/menus/Menu3.jpg')
 
 let enlace = {
 contextInfo: {
-externalAdReply: {title: wm + ' 🐈', body: 'support group', sourceUrl: redesMenu, thumbnail: await (await fetch(gataMenu)).buffer()}
+externalAdReply: {title: wm + ' 🐈', body: 'support group', sourceUrl: redesMenu, thumbnail: await (await fetch(gataMenu)).arrayBuffer()}
 }
 }
 let enlace2 = {

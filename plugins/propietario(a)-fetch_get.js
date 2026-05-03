@@ -12,7 +12,7 @@ throw `Content-Length: ${res.headers.get('content-length')}`
 }
 
 if (!/text|json/.test(res.headers.get('content-type'))) return conn.sendFile(m.chat, url, 'file', text, m)
-let txt = await res.buffer()
+let txt = await res.arrayBuffer()
 try {
 txt = format(JSON.parse(txt + ''))
 } catch (e) {

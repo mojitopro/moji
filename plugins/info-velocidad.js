@@ -15,7 +15,7 @@ let handler = async (m, {conn, usedPrefix, command, isRowner}) => {
 try {
 let enlace = {
 contextInfo: {
-externalAdReply: {title: wm + ' 🐈', body: 'support group', sourceUrl: accountsgb, thumbnailUrl: await (await fetch(gataMenu)).buffer()}
+externalAdReply: {title: wm + ' 🐈', body: 'support group', sourceUrl: accountsgb, thumbnailUrl: await (await fetch(gataMenu)).arrayBuffer()}
 }
 }
 let enlace2 = {
@@ -27,7 +27,7 @@ mediaType: 'VIDEO',
 description: '',
 title: wm,
 body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ',
-thumbnailUrl: await (await fetch(gataMenu)).buffer(),
+thumbnailUrl: await (await fetch(gataMenu)).arrayBuffer(),
 sourceUrl: accountsgb
 }
 }

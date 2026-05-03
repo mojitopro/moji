@@ -17,7 +17,7 @@ externalAdReply: {
 title: wm + ' 🐈',
 body: 'support group',
 sourceUrl: grupos.getRandom(),
-thumbnail: await (await fetch(gata.getRandom())).buffer()
+thumbnail: await (await fetch(gata.getRandom())).arrayBuffer()
 }
 }
 }
@@ -30,7 +30,7 @@ mediaType: 'VIDEO',
 description: '',
 title: wm,
 body: '😻 𝗦𝘂𝗽𝗲𝗿 𝗚𝗮𝘁𝗮𝗕𝗼𝘁-𝗠𝗗 - 𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽 ',
-thumbnailUrl: await (await fetch(global.img)).buffer(),
+thumbnailUrl: await (await fetch(global.img)).arrayBuffer(),
 sourceUrl: yt
 }
 }
